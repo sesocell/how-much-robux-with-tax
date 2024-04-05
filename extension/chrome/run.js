@@ -1,11 +1,11 @@
-let ourgoofy = document.getElementById("goofy");
+let calcbutton = document.getElementById("calculate");
 
-ourgoofy.onclick = (function(i) {return function() {
-    myFunc()
+calcbutton.onclick = (function(i) {return function() {
+    Calculatetax()
 };})();
 
-function myFunc() {
-let sesocell= document.getElementById("baysesocell").value;
-let save =  Math.floor(sesocell * (10/7) + 1)
-document.getElementById('output').innerHTML = save + "R$";
+function Calculatetax() {
+let Amount = document.getElementById("amountnumber").value;
+let ConvertedAmount =  Math.floor(Amount * (10/7) + 1)
+document.getElementById('output').innerHTML = ConvertedAmount + "R$";
 }
